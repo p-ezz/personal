@@ -360,7 +360,6 @@
       <li><a href="#mentoring">Mentoring</a></li>
       <li><a href="#updates">Updates</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
       <li><a href="#" id="open-gallery">📷 peep my photos!!&lt;3</a></li>
     </ul>
   </nav>
@@ -634,57 +633,65 @@
   </section>
 
   <!-- SKILLS -->
-<section id="skills" class="sec reveal">
+기존 kw 뱃지 스타일이랑 통일해서 태그 형식으로 바꿀까? 이렇게:
+html<section id="skills" class="sec reveal">
   <p class="sec-label">// Skills &amp; Tools</p>
   <h2 class="sec-title">Skills</h2>
-  <div class="skills-cols">
+
+  <div style="display:flex; flex-direction:column; gap:1.5rem;">
     <div>
       <p class="skill-group-title">Machine Learning &amp; AI</p>
-      <p style="font-size:0.84rem; color:var(--text-mid); line-height:1.9;">
-        Python · MATLAB · PyTorch · Hugging Face<br>
-        LLM · Vision Transformer (ViT) · Diffusion Models<br>
-        Gaussian Process · XGBoost · Random Forest
-      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+        <span class="kw">Python</span>
+        <span class="kw">MATLAB</span>
+        <span class="kw">PyTorch</span>
+        <span class="kw">Hugging Face</span>
+        <span class="kw">LLM</span>
+        <span class="kw">Vision Transformer (ViT)</span>
+        <span class="kw">Diffusion Models</span>
+        <span class="kw">Gaussian Process</span>
+        <span class="kw">XGBoost</span>
+        <span class="kw">Random Forest</span>
+      </div>
+    </div>
 
-      <p class="skill-group-title" style="margin-top:1.8rem">Simulation &amp; Dev</p>
-      <p style="font-size:0.84rem; color:var(--text-mid); line-height:1.9;">
-        COMSOL Multiphysics · Ansys · ADAMS<br>
-        CALPHAD · SPPARKS · LaTeX
-      </p>
-
-      <p class="skill-group-title" style="margin-top:1.8rem">CAD</p>
-      <p style="font-size:0.84rem; color:var(--text-mid); line-height:1.9;">
-        Solid Edge · NX · AutoCAD
-      </p>
+    <div>
+      <p class="skill-group-title">Simulation</p>
+      <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+        <span class="kw">COMSOL Multiphysics</span>
+        <span class="kw">Ansys</span>
+        <span class="kw">ADAMS</span>
+        <span class="kw">CALPHAD</span>
+        <span class="kw">SPPARKS</span>
+      </div>
     </div>
 
     <div>
       <p class="skill-group-title">Fabrication &amp; Characterization</p>
-      <p style="font-size:0.84rem; color:var(--text-mid); line-height:1.9;">
-        Metal 3D Printing (LPBF) · Polymer 3D Printing<br>
-        AFM · E-Beam · WLI · OCT<br>
-        Optical Microscopy · SAM
-      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+        <span class="kw">Metal 3D Printing (LPBF)</span>
+        <span class="kw">Polymer 3D Printing</span>
+        <span class="kw">AFM</span>
+        <span class="kw">E-Beam</span>
+        <span class="kw">WLI</span>
+        <span class="kw">OCT</span>
+        <span class="kw">Optical Microscopy</span>
+        <span class="kw">SAM</span>
+      </div>
+    </div>
+
+    <div>
+      <p class="skill-group-title">CAD</p>
+      <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+        <span class="kw">Solid Edge</span>
+        <span class="kw">NX</span>
+        <span class="kw">AutoCAD</span>
+      </div>
     </div>
   </div>
 </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="sec reveal">
-    <p class="sec-label">// Contact</p>
-    <h2 class="sec-title">Contact</h2>
-    <p class="contact-intro">
-      Feel free to reach out anytime via email. I'd be happy to connect!
-    </p>
-    <table class="contact-table">
-      <tr><td>Email</td><td><a href="mailto:eunzomi@gmail.com">eunzomi@gmail.com</a></td></tr>
-      <tr><td>Scholar</td><td><a href="https://scholar.google.com/citations?user=CZffOAIAAAAJ&hl=en" target="_blank">Google Scholar — Eunjeong Park</a></td></tr>
-      <tr><td>LinkedIn</td><td><a href="https://www.linkedin.com/in/eunzomi/" target="_blank">https://www.linkedin.com/in/eunzomi/</a></td></tr>
-    </table>
-    <footer>
-      <p>Eunjeong · PhD Researcher · Mechanical Engineering · © 2025</p>
-    </footer>
-  </section>
+
 
 </main>
 

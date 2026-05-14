@@ -52,6 +52,28 @@
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
+  /* ── CURSOR ── */
+  #cursor-dot {
+    position: fixed; pointer-events: none; z-index: 9999;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #d4737e;
+    transform: translate(-50%, -50%);
+  }
+  #cursor-ring1 {
+    position: fixed; pointer-events: none; z-index: 9998;
+    width: 28px; height: 28px; border-radius: 50%;
+    border: 1.5px solid #e8a0a8;
+    transform: translate(-50%, -50%);
+    transition: left 0.08s ease, top 0.08s ease;
+  }
+  #cursor-ring2 {
+    position: fixed; pointer-events: none; z-index: 9997;
+    width: 48px; height: 48px; border-radius: 50%;
+    border: 1px solid rgba(232,160,168,0.4);
+    transform: translate(-50%, -50%);
+    transition: left 0.2s ease, top 0.2s ease;
+  }
+
   /* ── LAYOUT ── */
   .page-wrap {
     display: grid;
@@ -347,6 +369,9 @@
 </style>
 </head>
 <body>
+<div id="cursor-dot"></div>
+<div id="cursor-ring1"></div>
+<div id="cursor-ring2"></div>
 <div class="page-wrap">
 
 <!-- ── SIDEBAR ── -->
@@ -798,6 +823,23 @@
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && galleryPanel.classList.contains('open')) closeGallery();
   });
+
+  /* ── Cursor rings ── */
+  const cursorDot   = document.getElementById('cursor-dot');
+  const cursorRing1 = document.getElementById('cursor-ring1');
+  const cursorRing2 = document.getElementById('cursor-ring2');
+  document.addEventListener('mousemove', e => {
+    cursorDot.style.left   = e.clientX + 'px';
+    cursorDot.style.top    = e.clientY + 'px';
+    cursorRing1.style.left = e.clientX + 'px';
+    cursorRing1.style.top  = e.clientY + 'px';
+    cursorRing2.style.left = e.clientX + 'px';
+    cursorRing2.style.top  = e.clientY + 'px';
+  });
+
+
+  
+  
 </script>
 </body>
 </html>
